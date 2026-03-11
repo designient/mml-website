@@ -30,7 +30,7 @@ const subServices = [
 
 export function DigitalMarketing() {
     return (
-        <section className="w-full bg-surface-soft py-20 md:py-28">
+        <section className="w-full bg-background py-20 md:py-28">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeader
                     eyebrow="Digital Marketing"
@@ -38,14 +38,14 @@ export function DigitalMarketing() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {subServices.map((service, idx) => (
                         <div
                             key={idx}
-                            className="bg-surface rounded-xl p-6 border border-border relative overflow-hidden group hover:border-primary/30 transition-colors duration-300"
+                            className="bg-white rounded-2xl p-7 border border-gray-100 relative overflow-hidden group hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/5 transition-all duration-300"
                         >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-primary/10 group-hover:bg-primary transition-colors duration-300" />
-                            <h3 className="font-heading font-bold text-lg text-text-primary mb-3 mt-2">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-primary/10 group-hover:bg-primary transition-colors duration-300 rounded-t-2xl" />
+                            <h3 className="font-display font-bold text-lg text-text-primary mb-3 mt-2">
                                 {service.title}
                             </h3>
                             <p className="font-body text-sm text-text-secondary leading-relaxed">

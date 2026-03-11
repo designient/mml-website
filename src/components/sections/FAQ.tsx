@@ -33,11 +33,14 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section className="w-full bg-background py-20 md:py-28">
+        <section className="w-full bg-white py-20 md:py-28 rounded-t-[2.5rem]">
             <FAQSchema items={faqs} />
             <div className="max-w-3xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="font-heading font-bold text-4xl md:text-5xl text-text-primary mb-6 leading-tight">
+                    <span className="inline-flex items-center font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em]">
+                        FAQ
+                    </span>
+                    <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-[3.25rem] text-text-primary mb-6 leading-[1.1] tracking-tight">
                         Frequently Asked Questions
                     </h2>
                     <p className="font-body text-lg text-text-secondary leading-relaxed">

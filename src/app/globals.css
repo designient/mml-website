@@ -43,6 +43,7 @@
 
   --font-heading: "Poppins", sans-serif;
   --font-body: "Nunito Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
 }
 
 /* ── Base Styles ── */
@@ -56,3 +57,19 @@ body {
   background-color: color-mix(in srgb, var(--primary) 20%, transparent);
   color: var(--primary);
 }
+
+/* ── Marquee Animation ── */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes marquee2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+@theme inline {
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee2: marquee2 40s linear infinite;
+}
+

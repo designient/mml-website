@@ -32,7 +32,7 @@ const industries = [
 
 export function Industries() {
     return (
-        <section className="w-full bg-background py-20 md:py-28 border-b border-border">
+        <section className="w-full bg-white py-20 md:py-28 rounded-t-[2.5rem]">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeader
                     eyebrow="Industries We Serve"
@@ -45,12 +45,12 @@ export function Industries() {
                     {industries.map((industry, idx) => (
                         <div
                             key={idx}
-                            className="group flex flex-col items-center gap-3 bg-surface rounded-xl py-6 px-4 border border-border hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                            className="group flex flex-col items-center gap-3 bg-background rounded-2xl py-7 px-4 border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
                         >
-                            <div className="w-10 h-10 rounded-lg bg-primary-soft text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 {industry.icon}
                             </div>
-                            <span className="font-heading font-semibold text-sm text-text-primary text-center">
+                            <span className="font-body font-bold text-sm text-text-primary text-center">
                                 {industry.name}
                             </span>
                         </div>

@@ -1,171 +1,83 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { ArrowRightIcon } from "lucide-react";
-import { PrimaryButton } from "@/components/ui/PrimaryButton";
-import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { ArrowUpRightIcon } from "lucide-react";
+
+const brandLogos = [
+    "TechScale", "GrowthOS", "Finova", "Buildify", "NexGen", "ProServe",
+    "CloudSync", "DataPulse", "UrbanCraft", "ScaleUp",
+];
 
 export function Hero() {
     return (
-        <section className="relative w-full bg-dark-background overflow-hidden">
-            <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+        <section className="relative w-full bg-background overflow-hidden">
+            <div className="max-w-5xl mx-auto px-6 pt-20 pb-12 md:pt-28 md:pb-16 lg:pt-32 lg:pb-20 flex flex-col items-center text-center">
+                {/* Pill badge */}
+                <span className="inline-flex items-center gap-2 font-body font-semibold text-xs tracking-wide text-text-primary bg-text-primary/8 px-5 py-2.5 rounded-full mb-10 md:mb-14">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                    Best Digital Marketing Agency in Bangalore
+                </span>
 
-            <div className="max-w-7xl mx-auto px-6 py-20 md:py-24 lg:py-28 flex flex-col lg:flex-row items-start gap-16 lg:gap-20">
-                {/* Left Content — 55% */}
-                <div className="w-full lg:w-[55%] z-10 flex flex-col items-start">
-                    <span className="font-body text-xs font-medium text-primary uppercase tracking-[0.2em] mb-8">
-                        Digital Growth Agency · Bengaluru
+                {/* Giant display heading with inline image */}
+                <h1 className="font-display font-black text-[clamp(2.4rem,6.5vw,5rem)] leading-[1.08] tracking-[-0.02em] text-text-primary mb-8 max-w-[900px]">
+                    We help brands{" "}
+                    <span className="relative inline-block">
+                        <span className="text-primary italic">grow</span>
+                        <svg className="absolute -bottom-1 left-0 w-full h-3 text-primary/25" viewBox="0 0 200 12" preserveAspectRatio="none">
+                            <path d="M0 8 Q50 0 100 6 Q150 12 200 4" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                        </svg>
+                    </span>{" "}
+                    with{" "}
+                    {/* Inline image — like Goody Bag's inline circular images in heading */}
+                    <span className="inline-flex items-center align-middle mx-1">
+                        <span className="inline-block w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-3 border-primary/20 shadow-lg shadow-primary/10 relative -top-1">
+                            <img
+                                src="/case-study-1.jpg"
+                                alt="Case study"
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.style.display = 'none';
+                                    target.parentElement!.classList.add('bg-gradient-to-br', 'from-primary/30', 'to-primary/10');
+                                }}
+                            />
+                        </span>
+                    </span>{" "}
+                    strategy that delivers real results
+                </h1>
+
+                {/* Subtitle */}
+                <p className="font-body text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-12">
+                    We partner with ambitious companies to build compounding growth systems
+                    across SEO, performance marketing, web development, and branding.
+                </p>
+
+                {/* Single CTA — pill with arrow-up-right like the reference */}
+                <Link
+                    href="/contact-us/"
+                    className="inline-flex items-center gap-3 font-body font-bold text-[15px] bg-text-primary text-white pl-8 pr-3 py-3.5 rounded-full hover:bg-primary transition-colors duration-300 group mb-20 md:mb-24"
+                >
+                    Start Your Growth Journey
+                    <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 transition-colors">
+                        <ArrowUpRightIcon className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </span>
+                </Link>
 
-                    <h1 className="font-heading font-bold text-[40px] md:text-[56px] xl:text-[68px] text-white leading-[1.08] tracking-tight mb-8">
-                        Strategic Digital <span className="text-primary">Growth</span> for
-                        Ambitious Brands.
-                    </h1>
-
-                    <p className="font-body text-lg md:text-xl text-white/70 max-w-lg mb-10 leading-[1.7]">
-                        We partner with B2B companies to build compounding growth systems
-                        across marketing, design, web, branding, and product experiences.
+                {/* Trusted brand logos — grayscale wordmarks like the reference */}
+                <div className="w-full">
+                    <p className="font-body font-semibold text-xs text-text-muted uppercase tracking-[0.2em] mb-8">
+                        Trusted by leading brands
                     </p>
-
-                    <div className="flex flex-col sm:flex-row items-start gap-4 mb-14">
-                        <PrimaryButton
-                            href="/contact-us/"
-                            className="text-base px-7 py-3.5 flex items-center justify-center gap-2.5 group"
-                        >
-                            Book a Strategy Call
-                            <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                        </PrimaryButton>
-                        <SecondaryButton
-                            href="/case-study/"
-                            className="text-base px-7 py-3.5 border-white/25 text-white hover:bg-white/10 flex items-center justify-center transition-all duration-300"
-                        >
-                            View Case Studies
-                        </SecondaryButton>
-                    </div>
-
-                    {/* Trust Metrics */}
-                    <div className="flex flex-wrap sm:flex-nowrap items-end gap-8 sm:gap-10 border-t border-white/10 pt-8 w-full">
-                        <div className="flex flex-col">
-                            <span className="font-heading font-bold text-3xl md:text-4xl text-white tracking-tight">
-                                50+
+                    <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12">
+                        {brandLogos.map((logo, idx) => (
+                            <span
+                                key={idx}
+                                className="font-display font-black text-xl md:text-2xl text-text-primary/20 hover:text-text-primary/50 transition-colors duration-300 select-none"
+                            >
+                                {logo}
                             </span>
-                            <span className="font-body text-[11px] text-white/60 uppercase tracking-[0.15em] mt-2">
-                                Brands Scaled
-                            </span>
-                        </div>
-                        <div className="hidden sm:block w-px h-10 bg-white/10" />
-                        <div className="flex flex-col">
-                            <span className="font-heading font-bold text-3xl md:text-4xl text-primary tracking-tight">
-                                3.2x
-                            </span>
-                            <span className="font-body text-[11px] text-white/60 uppercase tracking-[0.15em] mt-2">
-                                Avg. ROI
-                            </span>
-                        </div>
-                        <div className="hidden sm:block w-px h-10 bg-white/10" />
-                        <div className="flex flex-col">
-                            <span className="font-heading font-bold text-3xl md:text-4xl text-white tracking-tight">
-                                ₹100Cr+
-                            </span>
-                            <span className="font-body text-[11px] text-white/60 uppercase tracking-[0.15em] mt-2">
-                                Revenue Driven
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Right Visual Composition — 45% */}
-                <div className="w-full lg:w-[45%] relative min-h-[360px] lg:min-h-[460px] flex items-center justify-center">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-gradient-to-br from-primary/8 via-transparent to-secondary-accent/4 blur-[80px] rounded-full pointer-events-none" />
-
-                    <div className="relative w-full max-w-[400px] lg:max-w-[420px]">
-                        <div className="relative bg-dark-surface border border-white/10 rounded-2xl shadow-2xl shadow-black/30 transform rotate-1 hover:rotate-0 transition-transform duration-700 ease-out overflow-hidden">
-                            <div className="h-[3px] w-full bg-gradient-to-r from-primary via-primary/60 to-transparent" />
-
-                            <div className="p-7 md:p-8">
-                                <div className="flex items-center justify-between mb-6">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-2.5 h-2.5 rounded-full bg-primary" />
-                                        <span className="font-heading font-semibold text-[11px] text-white/60 uppercase tracking-[0.2em]">
-                                            Growth Roadmap
-                                        </span>
-                                    </div>
-                                    <span className="font-body text-[10px] text-white/40 tracking-wider">
-                                        Q1 — Q4 2026
-                                    </span>
-                                </div>
-
-                                <div className="space-y-3.5 mb-8">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary/70 flex-shrink-0" />
-                                        <div className="w-full h-2 bg-white/10 rounded-full" />
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-white/30 flex-shrink-0" />
-                                        <div className="w-4/5 h-2 bg-white/[0.07] rounded-full" />
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-white/30 flex-shrink-0" />
-                                        <div className="w-3/5 h-2 bg-white/[0.07] rounded-full" />
-                                    </div>
-                                </div>
-
-                                <div className="h-px w-full bg-white/10 mb-6" />
-
-                                <div className="flex items-end gap-5">
-                                    <div className="flex flex-col">
-                                        <span className="font-heading font-bold text-2xl text-white leading-none tracking-tight">
-                                            +340%
-                                        </span>
-                                        <span className="font-body text-[10px] text-white/50 uppercase tracking-[0.15em] mt-1.5">
-                                            Traffic
-                                        </span>
-                                    </div>
-                                    <div className="w-px h-7 bg-white/10" />
-                                    <div className="flex flex-col">
-                                        <span className="font-heading font-bold text-2xl text-primary leading-none tracking-tight">
-                                            2.1x
-                                        </span>
-                                        <span className="font-body text-[10px] text-white/50 uppercase tracking-[0.15em] mt-1.5">
-                                            ROAS
-                                        </span>
-                                    </div>
-                                    <div className="w-px h-7 bg-white/10" />
-                                    <div className="flex flex-col">
-                                        <span className="font-heading font-bold text-2xl text-white leading-none tracking-tight">
-                                            12x
-                                        </span>
-                                        <span className="font-body text-[10px] text-white/50 uppercase tracking-[0.15em] mt-1.5">
-                                            Pipeline
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="absolute -bottom-5 -left-4 md:-left-6 bg-dark-surface border border-white/10 rounded-xl px-5 py-4 shadow-xl shadow-black/20 hover:-translate-y-1 transition-transform duration-500 z-20">
-                            <div className="flex items-center gap-3.5">
-                                <div className="w-9 h-9 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                    <div className="w-2 h-2 rounded-full bg-primary" />
-                                </div>
-                                <div>
-                                    <span className="font-heading font-bold text-lg text-white block leading-tight">
-                                        +520%
-                                    </span>
-                                    <span className="font-body text-[10px] text-white/60 uppercase tracking-[0.12em]">
-                                        Revenue Growth
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="absolute -top-3 -right-2 md:-right-5 bg-dark-surface border border-primary/20 rounded-full px-4 py-2 shadow-lg shadow-black/10 hover:-translate-y-1 transition-transform duration-500 z-20">
-                            <span className="font-body text-[11px] font-medium text-primary tracking-wide">
-                                Strategy · Execution · Scale
-                            </span>
-                        </div>
-
-                        <div className="absolute top-1/3 -left-6 w-3 h-3 rounded-full bg-primary/20" />
-                        <div className="absolute -bottom-8 right-16 w-2 h-2 rounded-full bg-secondary-accent/15" />
+                        ))}
                     </div>
                 </div>
             </div>

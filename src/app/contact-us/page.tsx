@@ -46,9 +46,9 @@ export default function ContactPage() {
                 <div className="max-w-4xl mx-auto px-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
-                            { icon: <MailIcon className="w-5 h-5" />, label: "Email", value: "hello@mixmedialabs.com", href: "mailto:hello@mixmedialabs.com" },
-                            { icon: <PhoneIcon className="w-5 h-5" />, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
-                            { icon: <MapPinIcon className="w-5 h-5" />, label: "Location", value: "Bengaluru, India", href: undefined },
+                            { icon: <MailIcon className="w-5 h-5" />, label: "Email", value: "info@mixmedialabs.com", href: "mailto:info@mixmedialabs.com" },
+                            { icon: <PhoneIcon className="w-5 h-5" />, label: "Phone", value: "+91 63615 91035", href: "tel:+916361591035" },
+                            { icon: <MapPinIcon className="w-5 h-5" />, label: "Location", value: "HSR Layout, Bengaluru 560102", href: undefined },
                         ].map((item, idx) => (
                             <div key={idx} className="bg-surface rounded-xl p-6 border border-border text-center">
                                 <div className="w-10 h-10 rounded-lg bg-primary-soft text-primary flex items-center justify-center mx-auto mb-4">

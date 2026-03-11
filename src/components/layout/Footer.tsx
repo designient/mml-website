@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MailIcon, MapPinIcon, ArrowRightIcon } from "lucide-react";
+import { MailIcon, MapPinIcon, PhoneIcon, ArrowRightIcon } from "lucide-react";
 
 const serviceLinks = [
     { name: "SEO", href: "/seo-company-in-bangalore/" },
@@ -133,22 +133,31 @@ export function Footer() {
                         <ul className="space-y-6">
                             <li>
                                 <a
-                                    href="mailto:hello@mixmedialabs.com"
+                                    href="tel:+916361591035"
+                                    className="font-body text-sm text-white/75 hover:text-primary transition-colors duration-200 flex items-start gap-3 group"
+                                >
+                                    <PhoneIcon className="w-5 h-5 text-primary mt-0.5 group-hover:scale-110 transition-transform" />
+                                    +91 63615 91035
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="mailto:info@mixmedialabs.com"
                                     className="font-body text-sm text-white/75 hover:text-primary transition-colors duration-200 flex items-start gap-3 group"
                                 >
                                     <MailIcon className="w-5 h-5 text-primary mt-0.5 group-hover:scale-110 transition-transform" />
-                                    hello@mixmedialabs.com
+                                    info@mixmedialabs.com
                                 </a>
                             </li>
                             <li>
                                 <div className="font-body text-sm text-white/75 flex items-start gap-3">
-                                    <MapPinIcon className="w-5 h-5 text-primary mt-0.5" />
+                                    <MapPinIcon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                                     <span>
-                                        Bengaluru, India
+                                        No.524/A, 19th Main, Service Rd,
                                         <br />
-                                        <span className="text-white/60 mt-1 block">
-                                            Global remote team
-                                        </span>
+                                        Sector 3, HSR Layout,
+                                        <br />
+                                        Bengaluru, Karnataka 560102
                                     </span>
                                 </div>
                             </li>

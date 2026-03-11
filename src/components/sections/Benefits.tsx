@@ -44,7 +44,7 @@ const benefits = [
 
 export function Benefits() {
     return (
-        <section className="w-full bg-surface-soft py-20 md:py-28">
+        <section className="w-full bg-background py-20 md:py-28">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeader
                     eyebrow="The Mixmedia Advantage"
@@ -53,16 +53,16 @@ export function Benefits() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {benefits.map((benefit, idx) => (
                         <div
                             key={idx}
-                            className="bg-surface rounded-xl p-7 border border-border hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group flex flex-col"
+                            className="bg-white rounded-2xl p-7 border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 group flex flex-col"
                         >
-                            <div className="w-11 h-11 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 {benefit.icon}
                             </div>
-                            <h3 className="font-heading font-bold text-lg text-text-primary mb-2">
+                            <h3 className="font-display font-bold text-lg text-text-primary mb-2">
                                 {benefit.title}
                             </h3>
                             <p className="font-body text-sm text-text-secondary leading-relaxed">

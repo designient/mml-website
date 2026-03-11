@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { TrustedBy } from "@/components/sections/TrustedBy";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { Marquee } from "@/components/sections/Marquee";
 import { DigitalMarketing } from "@/components/sections/DigitalMarketing";
 import { Industries } from "@/components/sections/Industries";
 import { WhyMixmedia } from "@/components/sections/WhyMixmedia";
@@ -47,6 +48,7 @@ export default function HomePage() {
       <Hero />
       <TrustedBy />
       <ServicesGrid />
+      <Marquee />
       <DigitalMarketing />
       <Industries />
       <WhyMixmedia />
@@ -62,3 +64,4 @@ export default function HomePage() {
     </main>
   );
 }
+

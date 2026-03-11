@@ -11,7 +11,7 @@ const steps = [
 
 export function Process() {
     return (
-        <section className="w-full bg-surface py-20 md:py-28 border-y border-border">
+        <section className="w-full bg-white py-20 md:py-28 rounded-t-[2.5rem]">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeader
                     eyebrow="Our Process"
@@ -22,24 +22,24 @@ export function Process() {
                 />
 
                 <div className="relative">
-                    <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-border -z-10" />
+                    <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-px bg-gray-200 -z-10" />
 
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6">
                         {steps.map((step, idx) => (
                             <div key={idx} className="relative group flex flex-col items-center text-center">
-                                <div className="w-20 h-20 rounded-full bg-background border-4 border-surface flex items-center justify-center mb-6 shadow-sm group-hover:border-primary/20 transition-colors duration-300 relative z-10">
-                                    <span className="font-heading font-bold text-2xl text-primary">
+                                <div className="w-24 h-24 rounded-2xl bg-background flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md group-hover:bg-primary/5 transition-all duration-300 relative z-10 border border-gray-100">
+                                    <span className="font-display font-bold text-2xl text-primary">
                                         {step.number}
                                     </span>
                                 </div>
-                                <h3 className="font-heading font-bold text-lg text-text-primary mb-3">
+                                <h3 className="font-display font-bold text-lg text-text-primary mb-3">
                                     {step.title}
                                 </h3>
                                 <p className="font-body text-sm text-text-secondary leading-relaxed max-w-[200px]">
                                     {step.description}
                                 </p>
                                 {idx < steps.length - 1 && (
-                                    <div className="lg:hidden w-0.5 h-10 bg-border mt-6 -mb-4" />
+                                    <div className="lg:hidden w-px h-10 bg-gray-200 mt-6 -mb-4" />
                                 )}
                             </div>
                         ))}

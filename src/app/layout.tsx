@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Nunito_Sans } from "next/font/google";
+import { Poppins, Nunito_Sans, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -20,6 +20,13 @@ const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
   display: "swap",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -75,7 +82,7 @@ export default function RootLayout({
         <LocalBusinessSchema />
       </head>
       <body
-        className={`${poppins.variable} ${nunitoSans.variable} min-h-screen w-full bg-background font-body text-text-primary antialiased`}
+        className={`${poppins.variable} ${nunitoSans.variable} ${playfairDisplay.variable} min-h-screen w-full bg-background font-body text-text-primary antialiased`}
       >
         {/* Google Analytics 4 */}
         <Script
