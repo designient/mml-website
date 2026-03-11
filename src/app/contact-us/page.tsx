@@ -29,10 +29,10 @@ export default function ContactPage() {
         <main>
             <section className="w-full bg-background pt-12 pb-8 md:pt-16 md:pb-12">
                 <div className="max-w-4xl mx-auto px-6 text-center">
-                    <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                    <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                         Get In Touch
                     </span>
-                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-text-primary leading-[1.1] tracking-tight mb-6">
+                    <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-text-primary leading-[1.1] tracking-tight mb-6">
                         Let&apos;s Build Something <span className="text-primary">Great Together</span>
                     </h1>
                     <p className="font-body text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
@@ -54,7 +54,7 @@ export default function ContactPage() {
                                 <div className="w-10 h-10 rounded-lg bg-primary-soft text-primary flex items-center justify-center mx-auto mb-4">
                                     {item.icon}
                                 </div>
-                                <span className="font-heading font-semibold text-sm text-text-muted uppercase tracking-wide block mb-1">{item.label}</span>
+                                <span className="font-body font-semibold text-xs text-text-muted uppercase tracking-wide block mb-1">{item.label}</span>
                                 {item.href ? (
                                     <a href={item.href} className="font-body text-text-primary hover:text-primary transition-colors">
                                         {item.value}
@@ -72,8 +72,8 @@ export default function ContactPage() {
             <section className="w-full bg-surface py-16 md:py-20 border-y border-border">
                 <div className="max-w-5xl mx-auto px-6">
                     <div className="text-center mb-12">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">What Happens Next</span>
-                        <h2 className="font-heading font-bold text-2xl md:text-3xl text-text-primary leading-tight">From First Message to Growth Roadmap</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">What Happens Next</span>
+                        <h2 className="font-display font-bold text-2xl md:text-3xl text-text-primary leading-tight">From First Message to Growth Roadmap</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {processSteps.map((step, idx) => (
@@ -81,8 +81,8 @@ export default function ContactPage() {
                                 <div className="w-12 h-12 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                     {step.icon}
                                 </div>
-                                <span className="font-heading font-bold text-xs text-primary/60 uppercase tracking-widest block mb-2">Step {step.step}</span>
-                                <h3 className="font-heading font-bold text-lg text-text-primary mb-2">{step.title}</h3>
+                                <span className="font-display font-bold text-xs text-primary/60 uppercase tracking-widest block mb-2">Step {step.step}</span>
+                                <h3 className="font-display font-bold text-lg text-text-primary mb-2">{step.title}</h3>
                                 <p className="font-body text-sm text-text-secondary leading-relaxed">{step.description}</p>
                             </div>
                         ))}
@@ -95,9 +95,9 @@ export default function ContactPage() {
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <div className="flex items-center justify-center gap-3 mb-3">
                         <ClockIcon className="w-5 h-5 text-primary" />
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wider">Response Time</span>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full uppercase tracking-[0.12em] inline-flex items-center">Response Time</span>
                     </div>
-                    <p className="font-heading font-bold text-2xl md:text-3xl text-white mb-2">
+                    <p className="font-display font-bold text-2xl md:text-3xl text-white mb-2">
                         We respond within <span className="text-primary">24 hours</span>
                     </p>
                     <p className="font-body text-sm text-white/60">

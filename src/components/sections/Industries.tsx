@@ -45,7 +45,7 @@ export function Industries() {
                     {industries.map((industry, idx) => (
                         <div
                             key={idx}
-                            className="group flex flex-col items-center gap-3 bg-background rounded-2xl py-7 px-4 border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                            className="group flex flex-col items-center gap-3 bg-background rounded-2xl py-7 px-4 border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
                         >
                             <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 {industry.icon}

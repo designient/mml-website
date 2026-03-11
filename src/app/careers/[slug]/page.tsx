@@ -5,6 +5,7 @@ import { ChevronRightIcon, ArrowLeftIcon, ArrowRightIcon, MapPinIcon, BriefcaseI
 import { jobPostings, getJobBySlug } from "@/data/jobPostings";
 import { BreadcrumbSchema, JobPostingSchema } from "@/components/seo/jsonLd";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { CareerApplicationForm } from "@/components/forms/CareerApplicationForm";
 
 export function generateStaticParams() {
     return jobPostings.map((job) => ({ slug: job.slug }));
@@ -68,7 +69,7 @@ export default async function JobDetailPage({ params }: Props) {
                         <span className="text-white font-medium truncate max-w-[200px]">{job.title}</span>
                     </nav>
 
-                    <h1 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight tracking-tight mb-6">
+                    <h1 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight tracking-tight mb-6">
                         {job.title}
                     </h1>
 
@@ -92,7 +93,7 @@ export default async function JobDetailPage({ params }: Props) {
             {/* Summary */}
             <section className="w-full bg-background py-12 md:py-16">
                 <div className="max-w-3xl mx-auto px-6">
-                    <h2 className="font-heading font-bold text-2xl text-text-primary mb-4">About This Role</h2>
+                    <h2 className="font-display font-bold text-2xl text-text-primary mb-4">About This Role</h2>
                     <p className="font-body text-lg text-text-secondary leading-relaxed">{job.summary}</p>
                 </div>
             </section>
@@ -100,7 +101,7 @@ export default async function JobDetailPage({ params }: Props) {
             {/* Responsibilities */}
             <section className="w-full bg-surface py-12 md:py-16 border-y border-border">
                 <div className="max-w-3xl mx-auto px-6">
-                    <h2 className="font-heading font-bold text-2xl text-text-primary mb-6">What You&apos;ll Do</h2>
+                    <h2 className="font-display font-bold text-2xl text-text-primary mb-6">What You&apos;ll Do</h2>
                     <ul className="space-y-3">
                         {job.responsibilities.map((item, idx) => (
                             <li key={idx} className="flex items-start gap-3 font-body text-text-secondary leading-relaxed">
@@ -115,7 +116,7 @@ export default async function JobDetailPage({ params }: Props) {
             {/* Requirements */}
             <section className="w-full bg-background py-12 md:py-16">
                 <div className="max-w-3xl mx-auto px-6">
-                    <h2 className="font-heading font-bold text-2xl text-text-primary mb-6">What We&apos;re Looking For</h2>
+                    <h2 className="font-display font-bold text-2xl text-text-primary mb-6">What We&apos;re Looking For</h2>
                     <ul className="space-y-3">
                         {job.requirements.map((item, idx) => (
                             <li key={idx} className="flex items-start gap-3 font-body text-text-secondary leading-relaxed">
@@ -131,7 +132,7 @@ export default async function JobDetailPage({ params }: Props) {
             {job.niceToHave.length > 0 && (
                 <section className="w-full bg-surface py-12 md:py-16 border-y border-border">
                     <div className="max-w-3xl mx-auto px-6">
-                        <h2 className="font-heading font-bold text-2xl text-text-primary mb-6">Nice to Have</h2>
+                        <h2 className="font-display font-bold text-2xl text-text-primary mb-6">Nice to Have</h2>
                         <ul className="space-y-3">
                             {job.niceToHave.map((item, idx) => (
                                 <li key={idx} className="flex items-start gap-3 font-body text-text-secondary leading-relaxed">
@@ -145,19 +146,10 @@ export default async function JobDetailPage({ params }: Props) {
             )}
 
             {/* Apply CTA */}
-            <section className="w-full bg-dark-background py-16 md:py-20">
-                <div className="max-w-3xl mx-auto px-6 text-center">
-                    <h2 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">Interested in This Role?</h2>
-                    <p className="font-body text-white/60 mb-8 max-w-lg mx-auto">
-                        Send your resume and a brief note about why you&apos;re excited about this role. We review every application personally.
-                    </p>
-                    <a
-                        href={`mailto:careers@mixmedialabs.com?subject=Application: ${job.title}`}
-                        className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-heading font-semibold text-base px-8 py-4 rounded-lg transition-colors shadow-lg shadow-primary/20"
-                    >
-                        Apply Now
-                        <ArrowRightIcon className="w-4 h-4" />
-                    </a>
+            <section className="w-full bg-dark-background py-16 md:py-20 relative">
+                <div className="absolute inset-0 bg-background pointer-events-none" />
+                <div className="max-w-3xl mx-auto px-6 relative z-10">
+                    <CareerApplicationForm jobTitle={job.title} />
                 </div>
             </section>
 
@@ -165,7 +157,7 @@ export default async function JobDetailPage({ params }: Props) {
             {relatedJobs.length > 0 && (
                 <section className="w-full bg-background py-16 md:py-20 border-b border-border">
                     <div className="max-w-4xl mx-auto px-6">
-                        <h2 className="font-heading font-bold text-2xl text-text-primary mb-8 text-center">Other Open Positions</h2>
+                        <h2 className="font-display font-bold text-2xl text-text-primary mb-8 text-center">Other Open Positions</h2>
                         <div className="space-y-4">
                             {relatedJobs.map((related) => (
                                 <Link
@@ -174,7 +166,7 @@ export default async function JobDetailPage({ params }: Props) {
                                     className="flex flex-col sm:flex-row sm:items-center justify-between bg-surface rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300 gap-4"
                                 >
                                     <div>
-                                        <h3 className="font-heading font-bold text-lg text-text-primary mb-1">{related.title}</h3>
+                                        <h3 className="font-display font-bold text-lg text-text-primary mb-1">{related.title}</h3>
                                         <p className="font-body text-sm text-text-muted">{related.department} · {related.type} · {related.location}</p>
                                     </div>
                                     <ArrowRightIcon className="w-4 h-4 text-primary flex-shrink-0" />
@@ -184,7 +176,7 @@ export default async function JobDetailPage({ params }: Props) {
                         <div className="mt-8 text-center">
                             <Link
                                 href="/careers/"
-                                className="inline-flex items-center gap-2 font-heading font-semibold text-text-primary hover:text-primary transition-colors"
+                                className="inline-flex items-center gap-2 font-display font-semibold text-text-primary hover:text-primary transition-colors"
                             >
                                 <ArrowLeftIcon className="w-4 h-4" />
                                 All open positions

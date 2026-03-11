@@ -5,6 +5,7 @@ import { ArrowRightIcon, RocketIcon, BookOpenIcon, UsersIcon, HeartIcon, Briefca
 import { JobPostingSchema } from "@/components/seo/jsonLd";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { jobPostings } from "@/data/jobPostings";
+import { CareerApplicationForm } from "@/components/forms/CareerApplicationForm";
 
 export const metadata: Metadata = {
     title: "Careers",
@@ -55,7 +56,7 @@ export default function CareersPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-transparent to-secondary-accent/5 pointer-events-none" />
                 <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
                     <span className="font-body text-xs font-medium text-primary uppercase tracking-[0.2em] mb-6 block">Careers</span>
-                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight mb-8">
+                    <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight mb-8">
                         Build the <span className="text-primary">Future of Growth</span>
                     </h1>
                     <p className="font-body text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
@@ -72,8 +73,8 @@ export default function CareersPage() {
             <section className="w-full bg-background py-20 md:py-28">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Why Mixmedia Labs</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">Not Just a Job — a Growth Engine for Your Career</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Why Mixmedia Labs</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">Not Just a Job — a Growth Engine for Your Career</h2>
                         <p className="font-body text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
                             We build careers the same way we build growth for our clients — with strategy, intention, and relentless execution.
                         </p>
@@ -84,7 +85,7 @@ export default function CareersPage() {
                                 <div className="w-10 h-10 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                     {perk.icon}
                                 </div>
-                                <h3 className="font-heading font-bold text-lg text-text-primary mb-2">{perk.title}</h3>
+                                <h3 className="font-display font-bold text-lg text-text-primary mb-2">{perk.title}</h3>
                                 <p className="font-body text-sm text-text-secondary leading-relaxed">{perk.description}</p>
                             </div>
                         ))}
@@ -96,20 +97,20 @@ export default function CareersPage() {
             <section className="w-full bg-surface py-20 md:py-28 border-y border-border">
                 <div className="max-w-5xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Hiring Process</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary leading-tight">How We Hire</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Hiring Process</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary leading-tight">How We Hire</h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {hiringSteps.map((step, idx) => (
                             <div key={idx} className="bg-background rounded-xl p-8 border border-border relative group hover:border-primary/30 hover:shadow-md transition-all duration-300">
-                                <span className="font-heading font-bold text-4xl text-primary/15 absolute top-4 right-6">{step.step}</span>
+                                <span className="font-display font-bold text-4xl text-primary/15 absolute top-4 right-6">{step.step}</span>
                                 <div className="w-10 h-10 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-6">
                                     {idx === 0 && <BriefcaseIcon className="w-5 h-5" />}
                                     {idx === 1 && <MessageCircleIcon className="w-5 h-5" />}
                                     {idx === 2 && <SparklesIcon className="w-5 h-5" />}
                                     {idx === 3 && <CheckCircleIcon className="w-5 h-5" />}
                                 </div>
-                                <h3 className="font-heading font-bold text-lg text-text-primary mb-2">{step.title}</h3>
+                                <h3 className="font-display font-bold text-lg text-text-primary mb-2">{step.title}</h3>
                                 <p className="font-body text-sm text-text-secondary leading-relaxed">{step.description}</p>
                             </div>
                         ))}
@@ -122,8 +123,8 @@ export default function CareersPage() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
                         <div>
-                            <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Our Culture</span>
-                            <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-6 leading-tight">
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Our Culture</span>
+                            <h2 className="font-display font-bold text-3xl md:text-4xl text-white mb-6 leading-tight">
                                 Build Skills That <span className="text-primary">Compound</span>
                             </h2>
                             <div className="space-y-4 font-body text-white/70 leading-relaxed">
@@ -147,17 +148,17 @@ export default function CareersPage() {
             <section id="openings" className="w-full bg-background py-20 md:py-28">
                 <div className="max-w-4xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Open Positions</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary leading-tight">Join Our Team</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Open Positions</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary leading-tight">Join Our Team</h2>
                     </div>
                     <div className="space-y-4">
                         {jobPostings.map((role) => (
                             <Link key={role.slug} href={`/careers/${role.slug}/`} className="bg-surface rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group">
                                 <div>
-                                    <h3 className="font-heading font-bold text-lg text-text-primary mb-1 group-hover:text-primary transition-colors">{role.title}</h3>
+                                    <h3 className="font-display font-bold text-lg text-text-primary mb-1 group-hover:text-primary transition-colors">{role.title}</h3>
                                     <p className="font-body text-sm text-text-muted">{role.department} · {role.type} · {role.location}</p>
                                 </div>
-                                <span className="inline-flex items-center gap-2 font-heading font-semibold text-sm text-primary group-hover:gap-3 transition-all flex-shrink-0">
+                                <span className="inline-flex items-center gap-2 font-body font-bold text-sm text-primary group-hover:gap-3 transition-all flex-shrink-0">
                                     View Role <ArrowRightIcon className="w-3.5 h-3.5" />
                                 </span>
                             </Link>
@@ -165,18 +166,8 @@ export default function CareersPage() {
                     </div>
 
                     {/* General Application CTA */}
-                    <div className="mt-16 bg-surface rounded-2xl p-8 md:p-12 border border-border text-center">
-                        <h3 className="font-heading font-bold text-2xl text-text-primary mb-4">Don&apos;t See Your Role?</h3>
-                        <p className="font-body text-text-secondary max-w-lg mx-auto leading-relaxed mb-6">
-                            We&apos;re always looking for exceptional people. If you think you&apos;d be a great fit for Mixmedia Labs, send us your resume and tell us why.
-                        </p>
-                        <a
-                            href="mailto:careers@mixmedialabs.com?subject=General Application — Mixmedia Labs"
-                            className="inline-flex items-center gap-2 bg-primary text-white font-heading font-semibold text-sm px-8 py-4 rounded-lg hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20"
-                        >
-                            Send Your Resume
-                            <ArrowRightIcon className="w-4 h-4" />
-                        </a>
+                    <div className="mt-16 bg-surface rounded-2xl p-6 md:p-8 border border-border">
+                        <CareerApplicationForm isGeneral={true} />
                     </div>
                 </div>
             </section>

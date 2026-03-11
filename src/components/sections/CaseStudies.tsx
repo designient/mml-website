@@ -20,7 +20,7 @@ export function CaseStudies() {
                         <Link
                             key={study.slug}
                             href={`/case-study/${study.slug}/`}
-                            className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-300 flex flex-col"
+                            className="group bg-white rounded-2xl overflow-hidden border border-border hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-300 flex flex-col"
                         >
                             <div className={`h-52 w-full bg-gradient-to-br ${study.gradient} relative overflow-hidden`}>
                                 <div className="absolute inset-0 bg-black/5" />
@@ -37,7 +37,7 @@ export function CaseStudies() {
                                     {study.client}
                                 </h3>
 
-                                <div className="grid grid-cols-3 gap-4 mb-8 pb-8 border-b border-gray-100">
+                                <div className="grid grid-cols-3 gap-4 mb-8 pb-8 border-b border-border">
                                     {study.metrics.map((metric, mIdx) => (
                                         <div key={mIdx} className="flex flex-col">
                                             <span className="font-display font-bold text-2xl md:text-3xl text-text-primary mb-1">
@@ -65,7 +65,7 @@ export function CaseStudies() {
                 <div className="mt-16 text-center">
                     <Link
                         href="/case-study/"
-                        className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-gray-200 bg-white hover:bg-gray-50 font-body font-bold text-text-primary transition-colors"
+                        className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-border bg-white hover:bg-surface-soft font-body font-bold text-text-primary transition-colors"
                     >
                         View All Work
                         <ArrowRightIcon className="w-4 h-4" />

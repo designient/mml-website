@@ -73,7 +73,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
                     {/* Meta */}
                     <div className="flex items-center gap-3 mb-6 flex-wrap">
-                        <span className="inline-block bg-primary-soft px-3 py-1 rounded-full font-heading font-semibold text-xs text-primary uppercase tracking-wider border border-primary/10">
+                        <span className="inline-block bg-primary-soft px-3 py-1 rounded-full font-display font-semibold text-xs text-primary uppercase tracking-wider border border-primary/10">
                             {post.category}
                         </span>
                         <span className="font-body text-sm text-text-muted">{post.date}</span>
@@ -82,7 +82,7 @@ export default async function BlogArticlePage({ params }: Props) {
                     </div>
 
                     {/* Title */}
-                    <h1 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary leading-tight tracking-tight mb-4">
+                    <h1 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary leading-tight tracking-tight mb-4">
                         {post.title}
                     </h1>
 
@@ -110,7 +110,7 @@ export default async function BlogArticlePage({ params }: Props) {
                         <div className="bg-primary-soft/50 border border-primary/15 rounded-xl p-6 md:p-8 mb-10">
                             <div className="flex items-center gap-2 mb-4">
                                 <LightbulbIcon className="w-5 h-5 text-primary" />
-                                <h2 className="font-heading font-bold text-lg text-text-primary">Key Takeaways</h2>
+                                <h2 className="font-display font-bold text-lg text-text-primary">Key Takeaways</h2>
                             </div>
                             <ul className="space-y-2.5">
                                 {post.keyTakeaways.map((takeaway, idx) => (
@@ -134,7 +134,7 @@ export default async function BlogArticlePage({ params }: Props) {
                         {/* Inline CTA */}
                         {post.content.length > 4 && (
                             <div className="bg-surface rounded-xl border border-border p-6 md:p-8 my-10 text-center">
-                                <p className="font-heading font-bold text-lg text-text-primary mb-2">
+                                <p className="font-display font-bold text-lg text-text-primary mb-2">
                                     Need help implementing this?
                                 </p>
                                 <p className="font-body text-sm text-text-secondary mb-5">
@@ -158,10 +158,10 @@ export default async function BlogArticlePage({ params }: Props) {
                     {/* Author Box */}
                     <div className="mt-16 bg-surface rounded-xl border border-border p-6 md:p-8 flex flex-col sm:flex-row items-start gap-5">
                         <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary-accent flex items-center justify-center flex-shrink-0">
-                            <span className="font-heading font-bold text-xl text-white">ML</span>
+                            <span className="font-display font-bold text-xl text-white">ML</span>
                         </div>
                         <div>
-                            <h3 className="font-heading font-bold text-lg text-text-primary mb-1">{post.author}</h3>
+                            <h3 className="font-display font-bold text-lg text-text-primary mb-1">{post.author}</h3>
                             <p className="font-body text-sm text-text-secondary leading-relaxed">
                                 The Mixmedia Labs editorial team writes about SEO, performance marketing, web development, and growth strategy. Every article is informed by real campaign data and client experience.
                             </p>
@@ -172,7 +172,7 @@ export default async function BlogArticlePage({ params }: Props) {
                     <div className="mt-10 pt-8 border-t border-border">
                         <Link
                             href="/blog/"
-                            className="inline-flex items-center gap-2 font-heading font-semibold text-primary hover:gap-3 transition-all"
+                            className="inline-flex items-center gap-2 font-body font-bold text-primary hover:gap-3 transition-all"
                         >
                             <ArrowLeftIcon className="w-4 h-4" />
                             Back to all articles
@@ -186,8 +186,8 @@ export default async function BlogArticlePage({ params }: Props) {
                 <section className="w-full bg-surface py-20 md:py-28 border-y border-border">
                     <div className="max-w-7xl mx-auto px-6">
                         <div className="text-center mb-12">
-                            <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Keep Reading</span>
-                            <h2 className="font-heading font-bold text-2xl md:text-3xl text-text-primary leading-tight">Related Articles</h2>
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Keep Reading</span>
+                            <h2 className="font-display font-bold text-2xl md:text-3xl text-text-primary leading-tight">Related Articles</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {relatedPosts.map((related) => (
@@ -197,12 +197,12 @@ export default async function BlogArticlePage({ params }: Props) {
                                     className="group bg-background rounded-xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col"
                                 >
                                     <div className={`h-36 w-full bg-gradient-to-br ${related.gradient} relative p-4 flex items-start`}>
-                                        <span className="inline-block bg-surface/80 backdrop-blur-sm px-3 py-1 rounded-full font-heading font-semibold text-xs text-text-primary border border-border/50">
+                                        <span className="inline-block bg-surface/80 backdrop-blur-sm px-3 py-1 rounded-full font-display font-semibold text-xs text-text-primary border border-border/50">
                                             {related.category}
                                         </span>
                                     </div>
                                     <div className="p-5 flex flex-col flex-grow">
-                                        <h3 className="font-heading font-bold text-base text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                                        <h3 className="font-display font-bold text-base text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-2">
                                             {related.title}
                                         </h3>
                                         <span className="font-body text-xs text-text-muted mt-auto pt-3 border-t border-border/50">{related.readTime}</span>

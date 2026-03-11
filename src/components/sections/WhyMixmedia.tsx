@@ -42,7 +42,7 @@ export function WhyMixmedia() {
                             </div>
                         </div>
                         {/* Stat chip overlaid on image corner */}
-                        <div className="absolute -bottom-4 -left-2 md:bottom-6 md:left-6 bg-white rounded-xl px-5 py-4 shadow-lg shadow-black/8 border border-gray-100">
+                        <div className="absolute -bottom-4 -left-2 md:bottom-6 md:left-6 bg-white rounded-xl px-5 py-4 shadow-lg shadow-black/8 border border-border">
                             <div className="font-display font-bold text-3xl text-text-primary">98%</div>
                             <div className="font-body text-xs text-text-muted mt-0.5">Client retention rate</div>
                         </div>

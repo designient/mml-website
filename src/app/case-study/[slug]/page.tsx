@@ -60,11 +60,11 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                         <span className="text-white font-medium">{cs.client}</span>
                     </nav>
 
-                    <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full font-heading font-semibold text-xs text-white uppercase tracking-wider border border-white/30 mb-6">
+                    <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full font-display font-semibold text-xs text-white uppercase tracking-wider border border-white/30 mb-6">
                         {cs.industry}
                     </span>
 
-                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight mb-6">
+                    <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight mb-6">
                         {cs.client}
                     </h1>
 
@@ -80,10 +80,10 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                     <div className="grid grid-cols-3 gap-8 divide-x divide-white/10">
                         {cs.metrics.map((m, idx) => (
                             <div key={idx} className="flex flex-col items-center text-center px-4">
-                                <span className="font-heading font-bold text-3xl md:text-5xl text-white mb-2 tracking-tight">
+                                <span className="font-display font-bold text-3xl md:text-5xl text-white mb-2 tracking-tight">
                                     {m.value}
                                 </span>
-                                <span className="font-heading font-semibold text-xs md:text-sm text-primary uppercase tracking-wider">
+                                <span className="font-display font-semibold text-xs md:text-sm text-primary uppercase tracking-wider">
                                     {m.label}
                                 </span>
                             </div>
@@ -95,10 +95,10 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             {/* Challenge */}
             <section className="w-full bg-background py-16 md:py-24">
                 <div className="max-w-3xl mx-auto px-6">
-                    <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                    <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                         The Challenge
                     </span>
-                    <h2 className="font-heading font-bold text-2xl md:text-3xl text-text-primary mb-8 leading-tight">
+                    <h2 className="font-display font-bold text-2xl md:text-3xl text-text-primary mb-8 leading-tight">
                         What {cs.client} was facing
                     </h2>
                     <div className="space-y-6">
@@ -112,10 +112,10 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             {/* Approach */}
             <section className="w-full bg-surface py-16 md:py-24 border-y border-border">
                 <div className="max-w-3xl mx-auto px-6">
-                    <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                    <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                         Our Approach
                     </span>
-                    <h2 className="font-heading font-bold text-2xl md:text-3xl text-text-primary mb-8 leading-tight">
+                    <h2 className="font-display font-bold text-2xl md:text-3xl text-text-primary mb-8 leading-tight">
                         How we solved it
                     </h2>
                     <div className="space-y-6">
@@ -129,10 +129,10 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             {/* Results */}
             <section className="w-full bg-background py-16 md:py-24">
                 <div className="max-w-3xl mx-auto px-6">
-                    <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                    <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                         The Results
                     </span>
-                    <h2 className="font-heading font-bold text-2xl md:text-3xl text-text-primary mb-8 leading-tight">
+                    <h2 className="font-display font-bold text-2xl md:text-3xl text-text-primary mb-8 leading-tight">
                         What we achieved together
                     </h2>
                     <div className="space-y-6">
@@ -149,7 +149,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                         </PrimaryButton>
                         <Link
                             href="/case-study/"
-                            className="inline-flex items-center gap-2 font-heading font-semibold text-text-primary hover:text-primary transition-colors px-4 py-4"
+                            className="inline-flex items-center gap-2 font-display font-semibold text-text-primary hover:text-primary transition-colors px-4 py-4"
                         >
                             <ArrowLeftIcon className="w-4 h-4" />
                             All case studies
@@ -165,8 +165,8 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                             {cs.toolsUsed && cs.toolsUsed.length > 0 && (
                                 <div>
-                                    <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Tools & Channels</span>
-                                    <h3 className="font-heading font-bold text-xl text-text-primary mb-6">What We Used</h3>
+                                    <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Tools & Channels</span>
+                                    <h3 className="font-display font-bold text-xl text-text-primary mb-6">What We Used</h3>
                                     <div className="flex flex-wrap gap-2">
                                         {cs.toolsUsed.map((tool, idx) => (
                                             <span key={idx} className="inline-block bg-background px-4 py-2 rounded-lg border border-border font-body text-sm text-text-secondary">
@@ -178,8 +178,8 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                             )}
                             {cs.servicesUsed && cs.servicesUsed.length > 0 && (
                                 <div>
-                                    <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Related Services</span>
-                                    <h3 className="font-heading font-bold text-xl text-text-primary mb-6">How We Helped</h3>
+                                    <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Related Services</span>
+                                    <h3 className="font-display font-bold text-xl text-text-primary mb-6">How We Helped</h3>
                                     <div className="space-y-3">
                                         {cs.servicesUsed.map((service, idx) => (
                                             <Link
@@ -187,7 +187,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                                                 href={service.href}
                                                 className="flex items-center justify-between bg-background rounded-lg px-5 py-3.5 border border-border hover:border-primary/30 hover:shadow-sm transition-all group"
                                             >
-                                                <span className="font-heading font-semibold text-text-primary group-hover:text-primary transition-colors">{service.name}</span>
+                                                <span className="font-display font-semibold text-text-primary group-hover:text-primary transition-colors">{service.name}</span>
                                                 <ArrowRightIcon className="w-4 h-4 text-text-muted group-hover:text-primary transition-colors" />
                                             </Link>
                                         ))}

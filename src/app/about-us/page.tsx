@@ -48,7 +48,7 @@ export default function AboutPage() {
                     <span className="font-body text-xs font-medium text-primary uppercase tracking-[0.2em] mb-6 block">
                         About Mixmedia Labs
                     </span>
-                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight mb-8">
+                    <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight mb-8">
                         We Build <span className="text-primary">Growth Engines</span> for Ambitious Brands
                     </h1>
                     <p className="font-body text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
@@ -65,8 +65,8 @@ export default function AboutPage() {
             <section className="w-full bg-background py-20 md:py-28">
                 <div className="max-w-4xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Our Story</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">Built by Practitioners, Not Theorists</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Our Story</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">Built by Practitioners, Not Theorists</h2>
                     </div>
                     <div className="prose prose-lg max-w-none font-body text-text-secondary leading-relaxed space-y-6">
                         <p>Founded in Bengaluru, Mixmedia Labs was born from a simple frustration: most agencies deliver reports, not results. We set out to build something different — an agency that thinks like a growth team embedded inside your company.</p>
@@ -80,20 +80,20 @@ export default function AboutPage() {
             <section className="w-full bg-surface py-20 md:py-28 border-y border-border">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">What We Stand For</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary leading-tight">Mission & Vision</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">What We Stand For</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary leading-tight">Our Mission & Vision</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="bg-background rounded-2xl p-8 md:p-10 border-l-4 border-l-primary border border-border">
-                            <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Our Mission</span>
-                            <h3 className="font-heading font-bold text-2xl text-text-primary mb-4 leading-tight">Make world-class growth accessible to ambitious brands.</h3>
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Our Mission</span>
+                            <h3 className="font-display font-bold text-2xl text-text-primary mb-4 leading-tight">Make world-class growth accessible to ambitious brands.</h3>
                             <p className="font-body text-text-secondary leading-relaxed">
                                 We exist to close the gap between strategy and execution. Too many brands have great products but lack the growth infrastructure to scale. We build that infrastructure — from first click to closed revenue — so founders and marketing leaders can focus on what they do best.
                             </p>
                         </div>
                         <div className="bg-background rounded-2xl p-8 md:p-10 border-l-4 border-l-secondary-accent border border-border">
-                            <span className="font-heading font-semibold text-sm text-secondary-accent uppercase tracking-wide mb-4 block">Our Vision</span>
-                            <h3 className="font-heading font-bold text-2xl text-text-primary mb-4 leading-tight">Be the growth partner every B2B brand in India deserves.</h3>
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Our Vision</span>
+                            <h3 className="font-display font-bold text-2xl text-text-primary mb-4 leading-tight">Be the growth partner every B2B brand in India deserves.</h3>
                             <p className="font-body text-text-secondary leading-relaxed">
                                 We envision a world where Indian brands compete globally — not because they outspent their competitors, but because they out-strategised them. Mixmedia Labs is building the playbook for compounding, sustainable digital growth.
                             </p>
@@ -106,8 +106,8 @@ export default function AboutPage() {
             <section className="w-full bg-background py-20 md:py-28">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Our Values</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary leading-tight">What Drives Us</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Our Values</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary leading-tight">What Drives Us</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {values.map((value, idx) => (
@@ -115,7 +115,7 @@ export default function AboutPage() {
                                 <div className="w-10 h-10 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                     {value.icon}
                                 </div>
-                                <h3 className="font-heading font-bold text-lg text-text-primary mb-2">{value.title}</h3>
+                                <h3 className="font-display font-bold text-lg text-text-primary mb-2">{value.title}</h3>
                                 <p className="font-body text-sm text-text-secondary leading-relaxed">{value.description}</p>
                             </div>
                         ))}
@@ -134,7 +134,7 @@ export default function AboutPage() {
                             { value: "8+", label: "Years Experience" },
                         ].map((stat, idx) => (
                             <div key={idx} className="flex flex-col items-center">
-                                <span className="font-heading font-bold text-4xl md:text-5xl text-white tracking-tight">{stat.value}</span>
+                                <span className="font-display font-bold text-4xl md:text-5xl text-white tracking-tight">{stat.value}</span>
                                 <span className="font-body text-xs text-white/60 uppercase tracking-[0.15em] mt-2">{stat.label}</span>
                             </div>
                         ))}
@@ -146,8 +146,8 @@ export default function AboutPage() {
             <section className="w-full bg-background py-20 md:py-28">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">The Mixmedia Difference</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">Why Clients Choose Us</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">The Mixmedia Difference</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">Why Clients Choose Us</h2>
                         <p className="font-body text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
                             We&apos;re not for everyone. But if you&apos;re serious about growth, here&apos;s what makes us the right partner.
                         </p>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                                 <div className="w-12 h-12 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                     {item.icon}
                                 </div>
-                                <h3 className="font-heading font-bold text-xl text-text-primary mb-3">{item.title}</h3>
+                                <h3 className="font-display font-bold text-xl text-text-primary mb-3">{item.title}</h3>
                                 <p className="font-body text-text-secondary leading-relaxed">{item.description}</p>
                             </div>
                         ))}
@@ -180,8 +180,8 @@ export default function AboutPage() {
             <section className="w-full bg-surface py-20 md:py-28 border-y border-border">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">Our Leadership</span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">The People Behind the Growth</h2>
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">Our Leadership</span>
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">The People Behind the Growth</h2>
                         <p className="font-body text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
                             Senior practitioners who&apos;ve been in the trenches — not just managing campaigns, but building companies.
                         </p>
@@ -190,13 +190,13 @@ export default function AboutPage() {
                         {leadership.map((person, idx) => (
                             <div key={idx} className="bg-background rounded-xl border border-border overflow-hidden hover:shadow-md hover:border-primary/30 transition-all duration-300 group">
                                 <div className="h-48 bg-gradient-to-br from-primary/80 to-secondary-accent/80 relative flex items-center justify-center">
-                                    <span className="font-heading font-bold text-5xl text-white/80 group-hover:scale-110 transition-transform duration-300">
+                                    <span className="font-display font-bold text-5xl text-white/80 group-hover:scale-110 transition-transform duration-300">
                                         {person.initials}
                                     </span>
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="font-heading font-bold text-lg text-text-primary mb-1">{person.name}</h3>
-                                    <span className="font-heading font-semibold text-xs text-primary uppercase tracking-wider block mb-3">{person.role}</span>
+                                    <h3 className="font-display font-bold text-lg text-text-primary mb-1">{person.name}</h3>
+                                    <span className="font-display font-semibold text-xs text-primary uppercase tracking-wider block mb-3">{person.role}</span>
                                     <p className="font-body text-sm text-text-secondary leading-relaxed">{person.bio}</p>
                                 </div>
                             </div>

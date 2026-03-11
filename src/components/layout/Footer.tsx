@@ -76,7 +76,8 @@ export function Footer() {
                     {/* Company Info */}
                     <div className="flex flex-col gap-6">
                         <Link href="/" className="block">
-                            <img src="/logo.png" alt="Mixmedia Labs" className="h-9 brightness-0 invert" />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="/mml-logo-white.svg" alt="Mixmedia Labs" className="h-9 w-auto" />
                         </Link>
                         <p className="font-body text-sm text-white/75 leading-relaxed max-w-xs">
                             A premium digital growth agency based in Bengaluru, helping B2B
@@ -87,7 +88,7 @@ export function Footer() {
 
                     {/* Services Links */}
                     <div className="flex flex-col gap-6">
-                        <h4 className="font-heading font-bold text-lg text-white mb-2">
+                        <h4 className="font-display font-bold text-lg text-white mb-2">
                             Services
                         </h4>
                         <ul className="space-y-4">
@@ -107,7 +108,7 @@ export function Footer() {
 
                     {/* Company Links */}
                     <div className="flex flex-col gap-6">
-                        <h4 className="font-heading font-bold text-lg text-white mb-2">
+                        <h4 className="font-display font-bold text-lg text-white mb-2">
                             Company
                         </h4>
                         <ul className="space-y-4">
@@ -127,7 +128,7 @@ export function Footer() {
 
                     {/* Contact Info */}
                     <div className="flex flex-col gap-6">
-                        <h4 className="font-heading font-bold text-lg text-white mb-2">
+                        <h4 className="font-display font-bold text-lg text-white mb-2">
                             Contact
                         </h4>
                         <ul className="space-y-6">

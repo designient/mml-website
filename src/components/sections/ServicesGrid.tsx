@@ -88,7 +88,7 @@ export function ServicesGrid() {
                         <Link
                             key={idx}
                             href={service.href}
-                            className={`group bg-white rounded-2xl p-7 border border-gray-100 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-300 flex flex-col h-full relative overflow-hidden`}
+                            className={`group bg-white rounded-2xl p-7 border border-border hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-300 flex flex-col h-full relative overflow-hidden`}
                         >
                             {/* Subtle gradient background */}
                             <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />

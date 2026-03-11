@@ -21,6 +21,7 @@ import { WhyMixmedia } from "@/components/sections/WhyMixmedia";
 import { Process } from "@/components/sections/Process";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/jsonLd";
+import { ServiceInquiryForm } from "@/components/forms/ServiceInquiryForm";
 import type { ServiceData, ServiceSubService } from "@/data/services";
 
 /* ── Icon resolver for SubServices ── */
@@ -76,12 +77,12 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                     </nav>
 
                     {/* Eyebrow */}
-                    <span className="inline-block font-heading font-semibold text-xs text-primary uppercase tracking-[0.2em] mb-6 px-4 py-1.5 rounded-full bg-primary-soft border border-primary/10">
+                    <span className="inline-flex items-center font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full uppercase tracking-[0.12em] mb-6">
                         {service.eyebrow}
                     </span>
 
                     {/* Headline */}
-                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-text-primary leading-[1.1] tracking-tight mb-8">
+                    <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-text-primary leading-[1.1] tracking-tight mb-8">
                         {headlineParts[0]}
                         <span className="text-primary">{service.highlightedWord}</span>
                         {headlineParts[1]}
@@ -112,10 +113,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x divide-white/10">
                         {service.outcomes.map((outcome, idx) => (
                             <div key={idx} className="flex flex-col items-center text-center px-4">
-                                <span className="font-heading font-bold text-4xl md:text-5xl text-white mb-2 tracking-tight">
+                                <span className="font-display font-bold text-4xl md:text-5xl text-white mb-2 tracking-tight">
                                     {outcome.value}
                                 </span>
-                                <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wider mb-1">
+                                <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full uppercase tracking-[0.12em] inline-flex items-center mb-1">
                                     {outcome.label}
                                 </span>
                                 {outcome.sublabel && (
@@ -133,10 +134,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             <section className="w-full bg-background py-20 md:py-28">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                        <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                             What&apos;s Included
                         </span>
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
+                        <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
                             End-to-End {service.title} Execution
                         </h2>
                         <p className="font-body text-lg text-text-secondary leading-relaxed">
@@ -150,9 +151,9 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                 className="bg-surface rounded-xl p-8 border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 group"
                             >
                                 <div className="w-12 h-12 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <span className="font-heading font-bold text-lg">{String(idx + 1).padStart(2, "0")}</span>
+                                    <span className="font-display font-bold text-lg">{String(idx + 1).padStart(2, "0")}</span>
                                 </div>
-                                <h3 className="font-heading font-bold text-xl text-text-primary mb-3">
+                                <h3 className="font-display font-bold text-xl text-text-primary mb-3">
                                     {item.title}
                                 </h3>
                                 <p className="font-body text-text-secondary leading-relaxed">
@@ -169,10 +170,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                 <section className="w-full bg-surface py-20 md:py-28 border-y border-border">
                     <div className="max-w-7xl mx-auto px-6">
                         <div className="text-center mb-16">
-                            <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                                 {service.proof.eyebrow}
                             </span>
-                            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
+                            <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
                                 {service.proof.title}
                             </h2>
                         </div>
@@ -188,10 +189,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                 <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
 
                                 <div className="relative z-10">
-                                    <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full font-heading font-semibold text-xs text-white uppercase tracking-wider border border-white/30 mb-8">
+                                    <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full font-display font-semibold text-xs text-white uppercase tracking-wider border border-white/30 mb-8">
                                         {service.proof.tag}
                                     </span>
-                                    <h3 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight max-w-md">
+                                    <h3 className="font-display font-bold text-3xl md:text-4xl text-white leading-tight max-w-md">
                                         {service.proof.tagline}
                                     </h3>
                                 </div>
@@ -200,10 +201,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                 <div className="relative z-10 mt-12 bg-dark-surface/40 backdrop-blur-md border border-white/20 rounded-xl p-6">
                                     {service.proof.barLabel && (
                                         <div className="flex items-center justify-between mb-4">
-                                            <span className="font-heading font-semibold text-[11px] text-white/60 uppercase tracking-[0.15em]">
+                                            <span className="font-display font-semibold text-[11px] text-white/60 uppercase tracking-[0.15em]">
                                                 {service.proof.barLabel.title}
                                             </span>
-                                            <span className="font-heading font-bold text-sm text-primary">
+                                            <span className="font-display font-bold text-sm text-primary">
                                                 {service.proof.barLabel.range}
                                             </span>
                                         </div>
@@ -236,7 +237,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                 <div className={`grid gap-8 mb-10 pb-10 border-b border-border ${service.proof.metrics.length === 3 ? "grid-cols-3" : "grid-cols-2"}`}>
                                     {service.proof.metrics.map((m, idx) => (
                                         <div key={idx}>
-                                            <span className={`font-heading font-bold block mb-2 ${service.proof!.metrics.length === 3 ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} ${idx === 0 ? "text-primary" : "text-text-primary"}`}>
+                                            <span className={`font-display font-bold block mb-2 ${service.proof!.metrics.length === 3 ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} ${idx === 0 ? "text-primary" : "text-text-primary"}`}>
                                                 {m.value}
                                             </span>
                                             <span className={`font-body uppercase tracking-wide ${service.proof!.metrics.length === 3 ? "text-xs" : "text-sm"} text-text-muted`}>
@@ -254,7 +255,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
 
                                 <Link
                                     href={service.proof.ctaHref}
-                                    className="inline-flex items-center gap-2 font-heading font-semibold text-primary hover:text-primary-hover transition-colors group"
+                                    className="inline-flex items-center gap-2 font-body font-bold text-primary hover:text-primary-hover transition-colors group"
                                 >
                                     {service.proof.ctaText}
                                     <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -271,10 +272,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                     <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                         {/* Left Content */}
                         <div className="w-full lg:w-1/2">
-                            <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                                 {service.matters.eyebrow}
                             </span>
-                            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
+                            <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
                                 {service.matters.title}
                             </h2>
                             <div className="space-y-6 font-body text-lg text-text-secondary leading-relaxed">
@@ -290,7 +291,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="font-heading font-medium text-text-primary">{point}</span>
+                                        <span className="font-display font-medium text-text-primary">{point}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -305,7 +306,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                         <TrendingUpIcon className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="font-heading font-bold text-xl text-text-primary">
+                                        <h3 className="font-display font-bold text-xl text-text-primary">
                                             {service.matters.visual.title}
                                         </h3>
                                         <p className="font-body text-sm text-text-secondary">
@@ -325,10 +326,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                         <path d="M 0 180 Q 150 160 250 80 T 400 20" fill="none" stroke="var(--primary)" strokeWidth="4" />
                                     </svg>
                                     {/* Labels */}
-                                    <span className="absolute top-[10%] right-4 font-heading font-bold text-sm text-primary">
+                                    <span className="absolute top-[10%] right-4 font-display font-bold text-sm text-primary">
                                         Organic SEO
                                     </span>
-                                    <span className="absolute top-[55%] right-4 font-heading font-medium text-sm text-text-muted">
+                                    <span className="absolute top-[55%] right-4 font-display font-medium text-sm text-text-muted">
                                         Paid Ads
                                     </span>
                                 </div>
@@ -349,10 +350,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                 <section className="w-full bg-background py-20 md:py-28">
                     <div className="max-w-7xl mx-auto px-6">
                         <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                                 Deep Expertise
                             </span>
-                            <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">
+                            <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">
                                 Our {service.title} Capabilities
                             </h2>
                             <p className="font-body text-lg text-text-secondary leading-relaxed">
@@ -363,7 +364,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {service.capabilities.map((group, idx) => (
                                 <div key={idx} className="bg-surface rounded-xl p-8 border border-border shadow-sm">
-                                    <h3 className="font-heading font-bold text-xl text-text-primary mb-6 pb-4 border-b border-border">
+                                    <h3 className="font-display font-bold text-xl text-text-primary mb-6 pb-4 border-b border-border">
                                         {group.category}
                                     </h3>
                                     <ul className="space-y-4">
@@ -386,10 +387,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                 <section className="w-full bg-surface-soft py-20 md:py-28">
                     <div className="max-w-7xl mx-auto px-6">
                         <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="font-heading font-semibold text-sm text-primary uppercase tracking-wide mb-4 block">
+                            <span className="font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] inline-flex items-center">
                                 Our Channels
                             </span>
-                            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
+                            <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 leading-tight">
                                 Marketing Expertise Across Every Channel
                             </h2>
                             <p className="font-body text-lg text-text-secondary leading-relaxed">
@@ -408,7 +409,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                         <div className="w-11 h-11 rounded-lg bg-primary-soft text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                             <IconComp className="w-5 h-5" />
                                         </div>
-                                        <h3 className="font-heading font-bold text-lg text-text-primary mb-2">
+                                        <h3 className="font-display font-bold text-lg text-text-primary mb-2">
                                             {sub.title}
                                         </h3>
                                         <p className="font-body text-sm text-text-secondary leading-relaxed mb-6 flex-grow">
@@ -416,7 +417,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                                         </p>
                                         <Link
                                             href={sub.href}
-                                            className="inline-flex items-center gap-2 font-heading font-semibold text-sm text-primary mt-auto group-hover:gap-3 transition-all"
+                                            className="inline-flex items-center gap-2 font-body font-bold text-sm text-primary mt-auto group-hover:gap-3 transition-all"
                                         >
                                             Learn more <ArrowRightIcon className="w-3.5 h-3.5" />
                                         </Link>
@@ -431,14 +432,21 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             {/* ── Why Mixmedia ── */}
             <WhyMixmedia />
 
-            {/* ── Process ── */}
-            <Process />
+        {/* ── Process ── */}
+        <Process />
 
-            {/* ── FAQ ── */}
+        {/* ── Service Inquiry Form ── */}
+        <section className="w-full bg-surface-soft py-20 md:py-28">
+            <div className="max-w-4xl mx-auto px-6">
+                <ServiceInquiryForm serviceName={service.title} />
+            </div>
+        </section>
+
+        {/* ── FAQ ── */}
             <section className="w-full bg-background py-20 md:py-28">
                 <div className="max-w-3xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 leading-tight">
                             {service.title} FAQs
                         </h2>
                         <p className="font-body text-lg text-text-secondary leading-relaxed">

@@ -55,7 +55,7 @@ export function Insights() {
                     {blogs.map((blog, idx) => (
                         <div
                             key={idx}
-                            className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-300 flex flex-col cursor-pointer"
+                            className="group bg-white rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-300 flex flex-col cursor-pointer"
                         >
                             <div className={`h-44 w-full bg-gradient-to-br ${blog.gradient} relative p-5 flex items-start`}>
                                 <span className="inline-block bg-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-full font-body font-bold text-xs text-text-primary">
@@ -71,7 +71,7 @@ export function Insights() {
                                     {blog.excerpt}
                                 </p>
 
-                                <div className="flex items-center justify-between pt-4 border-t border-gray-100 font-body text-xs text-text-muted">
+                                <div className="flex items-center justify-between pt-4 border-t border-border font-body text-xs text-text-muted">
                                     <span>{blog.date}</span>
                                     <span>{blog.readTime}</span>
                                 </div>

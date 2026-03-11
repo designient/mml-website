@@ -18,7 +18,7 @@ export function ContactSection() {
     return (
         <section className="w-full bg-background py-20 md:py-28">
             <div className="max-w-5xl mx-auto px-6">
-                <div className="bg-white rounded-2xl border border-gray-100 shadow-xl shadow-black/5 overflow-hidden flex flex-col lg:flex-row">
+                <div className="bg-white rounded-2xl border border-border shadow-xl shadow-black/5 overflow-hidden flex flex-col lg:flex-row">
                     {/* Left Content */}
                     <div className="w-full lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                         <span className="inline-flex items-center font-body font-semibold text-xs text-text-primary bg-text-primary/8 px-4 py-2 rounded-full mb-6 uppercase tracking-[0.12em] w-fit">
@@ -49,7 +49,7 @@ export function ContactSection() {
                     </div>
 
                     {/* Right Form */}
-                    <div className="w-full lg:w-1/2 bg-background p-8 md:p-12 border-t lg:border-t-0 lg:border-l border-gray-100">
+                    <div className="w-full lg:w-1/2 bg-background p-8 md:p-12 border-t lg:border-t-0 lg:border-l border-border">
                         {submitted ? (
                             <div className="flex flex-col items-center justify-center h-full text-center py-8">
                                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
@@ -79,7 +79,7 @@ export function ContactSection() {
                                             onChange={(e) => setEmail(e.target.value)}
                                             placeholder="you@company.com"
                                             required
-                                            className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-white font-body text-text-primary placeholder:text-text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                                            className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-border bg-white font-body text-text-primary placeholder:text-text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                                         />
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@ export function ContactSection() {
                                             onChange={(e) => setPhone(e.target.value)}
                                             placeholder="+91 98765 43210"
                                             required
-                                            className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-white font-body text-text-primary placeholder:text-text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                                            className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-border bg-white font-body text-text-primary placeholder:text-text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                                         />
                                     </div>
                                 </div>

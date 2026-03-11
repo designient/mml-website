@@ -9,7 +9,7 @@ export function OrganizationSchema() {
         "@type": "Organization",
         name: "Mixmedia Labs",
         url: BASE_URL,
-        logo: `${BASE_URL}/logo.png`,
+        logo: `${BASE_URL}/mml-logo.svg`,
         sameAs: [
             "https://www.linkedin.com/company/mixmedialabs/",
             "https://x.com/mixmedialabs",
@@ -39,7 +39,7 @@ export function LocalBusinessSchema() {
         url: BASE_URL,
         telephone: "+91-63615-91035",
         email: "info@mixmedialabs.com",
-        image: `${BASE_URL}/logo.png`,
+        image: `${BASE_URL}/mml-logo.svg`,
         address: {
             "@type": "PostalAddress",
             streetAddress: "No.524/A, 19th Main, Service Rd, Sector 3, HSR Layout",
@@ -161,7 +161,7 @@ export function ArticleSchema({ title, description, slug, datePublished, author 
             url: BASE_URL,
             logo: {
                 "@type": "ImageObject",
-                url: `${BASE_URL}/logo.png`,
+                url: `${BASE_URL}/mml-logo.svg`,
             },
         },
         mainEntityOfPage: {
@@ -209,6 +209,26 @@ export function JobPostingSchema({ title, description, employmentType, location 
             "@type": "Country",
             name: "India",
         },
+    };
+    return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+    return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+
+/* ── WebSite Schema ── */
+export function WebSiteSchema() {
+    const data = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Mixmedia Labs",
+        url: BASE_URL,
+        potentialAction: {
+            "@type": "SearchAction",
+            target: {
+                "@type": "EntryPoint",
+                urlTemplate: `${BASE_URL}/search?q={search_term_string}`
+            },
+            "query-input": "required name=search_term_string"
+        }
     };
     return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }

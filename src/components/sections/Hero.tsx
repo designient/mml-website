@@ -4,11 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
 
-const brandLogos = [
-    "TechScale", "GrowthOS", "Finova", "Buildify", "NexGen", "ProServe",
-    "CloudSync", "DataPulse", "UrbanCraft", "ScaleUp",
-];
-
 export function Hero() {
     return (
         <section className="relative w-full bg-background overflow-hidden">
@@ -32,6 +27,7 @@ export function Hero() {
                     {/* Inline image — like Goody Bag's inline circular images in heading */}
                     <span className="inline-flex items-center align-middle mx-1">
                         <span className="inline-block w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-3 border-primary/20 shadow-lg shadow-primary/10 relative -top-1">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src="/case-study-1.jpg"
                                 alt="Case study"
@@ -56,30 +52,13 @@ export function Hero() {
                 {/* Single CTA — pill with arrow-up-right like the reference */}
                 <Link
                     href="/contact-us/"
-                    className="inline-flex items-center gap-3 font-body font-bold text-[15px] bg-text-primary text-white pl-8 pr-3 py-3.5 rounded-full hover:bg-primary transition-colors duration-300 group mb-20 md:mb-24"
+                    className="inline-flex items-center gap-3 font-body font-bold text-[15px] bg-text-primary text-white pl-8 pr-3 py-3.5 rounded-full hover:bg-primary transition-colors duration-300 group"
                 >
                     Start Your Growth Journey
                     <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 transition-colors">
                         <ArrowUpRightIcon className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </span>
                 </Link>
-
-                {/* Trusted brand logos — grayscale wordmarks like the reference */}
-                <div className="w-full">
-                    <p className="font-body font-semibold text-xs text-text-muted uppercase tracking-[0.2em] mb-8">
-                        Trusted by leading brands
-                    </p>
-                    <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12">
-                        {brandLogos.map((logo, idx) => (
-                            <span
-                                key={idx}
-                                className="font-display font-black text-xl md:text-2xl text-text-primary/20 hover:text-text-primary/50 transition-colors duration-300 select-none"
-                            >
-                                {logo}
-                            </span>
-                        ))}
-                    </div>
-                </div>
             </div>
         </section>
     );

@@ -65,20 +65,21 @@ export function Navbar() {
                 {/* Left: Logo + Est badge */}
                 <div className="flex items-center gap-3 flex-shrink-0">
                     <Link href="/" className="flex-shrink-0">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src="/logo.png"
+                            src="/mml-logo.svg"
                             alt="Mixmedia Labs"
-                            className={`transition-all duration-300 ${isScrolled ? "h-8" : "h-10"}`}
+                            className={`w-auto transition-all duration-300 ${isScrolled ? "h-8" : "h-10"}`}
                         />
                     </Link>
-                    <span className="hidden sm:inline-flex items-center font-body text-xs font-bold text-text-primary bg-gray-100 px-3 py-1.5 rounded-full">
+                    <span className="hidden sm:inline-flex items-center font-body text-xs font-bold text-text-primary bg-surface px-3 py-1.5 rounded-full">
                         Est 2018
                     </span>
                 </div>
 
                 {/* Center: Nav links inside pill container */}
                 <div className="hidden lg:flex items-center">
-                    <div className="flex items-center bg-gray-50 rounded-full px-2 py-1.5">
+                    <div className="flex items-center bg-surface-soft rounded-full px-2 py-1.5">
                         {navLinks.map((link, idx) =>
                             link.isMega ? (
                                 <div
@@ -104,7 +105,7 @@ export function Navbar() {
 
                                     {/* Mega Menu */}
                                     <div
-                                        className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1100px] max-w-[calc(100vw-2rem)] bg-white border border-gray-100 rounded-2xl shadow-2xl shadow-black/8 transition-all duration-200 origin-top ${isServicesOpen
+                                        className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1100px] max-w-[calc(100vw-2rem)] bg-white border border-border rounded-2xl shadow-2xl shadow-black/8 transition-all duration-200 origin-top ${isServicesOpen
                                             ? "opacity-100 scale-100 visible translate-y-0"
                                             : "opacity-0 scale-[0.98] invisible -translate-y-1"
                                             }`}
@@ -113,7 +114,7 @@ export function Navbar() {
 
                                         <div className="flex p-6">
                                             {/* Core Services */}
-                                            <div className="w-[35%] pr-6 border-r border-gray-100">
+                                            <div className="w-[35%] pr-6 border-r border-border">
                                                 <h3 className="text-xs font-body font-bold text-text-muted tracking-[0.15em] mb-4 uppercase">
                                                     Core Services
                                                 </h3>
@@ -122,7 +123,7 @@ export function Navbar() {
                                                         <Link
                                                             key={sIdx}
                                                             href={service.href}
-                                                            className="font-body font-semibold text-[14px] text-text-primary px-4 py-3 rounded-xl hover:bg-gray-50 hover:text-primary transition-colors duration-150 block"
+                                                            className="font-body font-semibold text-[14px] text-text-primary px-4 py-3 rounded-xl hover:bg-surface-soft hover:text-primary transition-colors duration-150 block"
                                                         >
                                                             {service.name}
                                                         </Link>
@@ -131,7 +132,7 @@ export function Navbar() {
                                             </div>
 
                                             {/* Digital Marketing */}
-                                            <div className="w-[35%] px-6 border-r border-gray-100">
+                                            <div className="w-[35%] px-6 border-r border-border">
                                                 <h3 className="text-xs font-body font-bold text-text-muted tracking-[0.15em] mb-4 uppercase">
                                                     Digital Marketing
                                                 </h3>
@@ -140,7 +141,7 @@ export function Navbar() {
                                                         <Link
                                                             key={sIdx}
                                                             href={service.href}
-                                                            className="font-body font-semibold text-[14px] text-text-primary px-4 py-3 rounded-xl hover:bg-gray-50 hover:text-primary transition-colors duration-150 block"
+                                                            className="font-body font-semibold text-[14px] text-text-primary px-4 py-3 rounded-xl hover:bg-surface-soft hover:text-primary transition-colors duration-150 block"
                                                         >
                                                             {service.name}
                                                         </Link>
@@ -150,7 +151,7 @@ export function Navbar() {
 
                                             {/* Featured */}
                                             <div className="w-[30%] pl-6">
-                                                <div className="bg-gray-50 rounded-2xl p-6 h-full flex flex-col">
+                                                <div className="bg-surface-soft rounded-2xl p-6 h-full flex flex-col">
                                                     <p className="font-body text-sm text-text-secondary leading-relaxed mb-6">
                                                         End-to-end digital growth solutions for ambitious brands.
                                                     </p>
@@ -174,7 +175,7 @@ export function Navbar() {
                                             </div>
                                         </div>
 
-                                        <div className="bg-gray-50 px-6 py-3.5 rounded-b-2xl border-t border-gray-100 flex justify-between items-center">
+                                        <div className="bg-surface-soft px-6 py-3.5 rounded-b-2xl border-t border-border flex justify-between items-center">
                                             <span className="font-body text-sm text-text-secondary">
                                                 Need a custom solution?
                                             </span>
@@ -222,7 +223,7 @@ export function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="lg:hidden text-text-primary p-2 rounded-xl hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer"
+                    className="lg:hidden text-text-primary p-2 rounded-xl hover:bg-surface-soft transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 >
@@ -248,13 +249,18 @@ export function Navbar() {
                     }`}
             >
                 <div className="flex flex-col h-full">
-                    <div className="flex items-center justify-between px-6 h-[76px] border-b border-gray-100">
+                    <div className="flex items-center justify-between px-6 h-[76px] border-b border-border">
                         <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                            <img src="/logo.png" alt="Mixmedia Labs" className="h-9" />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img 
+                                src="/mml-logo.svg" 
+                                alt="Mixmedia Labs" 
+                                className="h-9 w-auto" 
+                            />
                         </Link>
                         <button
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="p-2 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer"
+                            className="p-2 rounded-xl hover:bg-surface-soft transition-colors cursor-pointer"
                             aria-label="Close menu"
                         >
                             <XIcon className="w-5 h-5 text-text-primary" />
@@ -272,7 +278,7 @@ export function Navbar() {
                                         key={idx}
                                         href={service.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="font-body font-semibold text-[15px] text-text-primary px-3 py-2.5 rounded-xl hover:bg-gray-50 hover:text-primary transition-colors block"
+                                        className="font-body font-semibold text-[15px] text-text-primary px-3 py-2.5 rounded-xl hover:bg-surface-soft hover:text-primary transition-colors block"
                                     >
                                         {service.name}
                                     </Link>
@@ -280,7 +286,7 @@ export function Navbar() {
                             </div>
                         </div>
 
-                        <div className="h-px bg-gray-100 mb-6" />
+                        <div className="h-px bg-surface mb-6" />
 
                         <div className="mb-6">
                             <span className="font-body font-bold text-xs text-text-muted uppercase tracking-[0.15em] mb-4 block">
@@ -292,7 +298,7 @@ export function Navbar() {
                                         key={idx}
                                         href={service.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="font-body font-semibold text-[15px] text-text-primary px-3 py-2.5 rounded-xl hover:bg-gray-50 hover:text-primary transition-colors block"
+                                        className="font-body font-semibold text-[15px] text-text-primary px-3 py-2.5 rounded-xl hover:bg-surface-soft hover:text-primary transition-colors block"
                                     >
                                         {service.name}
                                     </Link>
@@ -300,7 +306,7 @@ export function Navbar() {
                             </div>
                         </div>
 
-                        <div className="h-px bg-gray-100 mb-6" />
+                        <div className="h-px bg-surface mb-6" />
 
                         <div className="flex flex-col gap-1">
                             {navLinks
@@ -310,7 +316,7 @@ export function Navbar() {
                                         key={idx}
                                         href={link.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="font-display font-bold text-lg text-text-primary px-3 py-3 rounded-xl hover:bg-gray-50 transition-colors"
+                                        className="font-display font-bold text-lg text-text-primary px-3 py-3 rounded-xl hover:bg-surface-soft transition-colors"
                                     >
                                         {link.label}
                                     </Link>
@@ -318,7 +324,7 @@ export function Navbar() {
                         </div>
                     </div>
 
-                    <div className="px-6 py-6 border-t border-gray-100">
+                    <div className="px-6 py-6 border-t border-border">
                         <a
                             href="tel:+916361591035"
                             className="flex items-center justify-center gap-2 font-body text-sm font-semibold text-text-primary mb-4"

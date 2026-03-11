@@ -42,7 +42,7 @@ export function DigitalMarketing() {
                     {subServices.map((service, idx) => (
                         <div
                             key={idx}
-                            className="bg-white rounded-2xl p-7 border border-gray-100 relative overflow-hidden group hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/5 transition-all duration-300"
+                            className="bg-white rounded-2xl p-7 border border-border relative overflow-hidden group hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/5 transition-all duration-300"
                         >
                             <div className="absolute top-0 left-0 w-full h-1 bg-primary/10 group-hover:bg-primary transition-colors duration-300 rounded-t-2xl" />
                             <h3 className="font-display font-bold text-lg text-text-primary mb-3 mt-2">

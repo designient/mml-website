@@ -31,7 +31,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
                         className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer"
                         aria-expanded={openIndex === idx}
                     >
-                        <span className="font-heading font-semibold text-lg text-text-primary pr-4">
+                        <span className="font-display font-semibold text-lg text-text-primary pr-4">
                             {item.question}
                         </span>
                         <ChevronDownIcon
